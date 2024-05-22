@@ -1,0 +1,17 @@
+.person-card {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+.person-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.person-name {
+    padding-top: 5px;
+}
