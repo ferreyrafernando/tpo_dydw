@@ -5,47 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
     <title>Simulador de Manejo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="./styles/style.css" rel="stylesheet" /> </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+    <link href="./styles/style.css" rel="stylesheet" />
+   <link href="../../../assets/css/estilos.css" rel="stylesheet" />
+   
+</head>
 
 <body>
-    <header class="p-3 bg-light">
-        <h1 class="d-flex mx-5 text-center fw-bolder justify-content-center">Simulador de Manejo</h1>
-    </header>
-    <div class="game-container">
-        <h2>Fernando Ferreyra</h2>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instruccionesModal">
-            Instrucciones del Juego
-        </button>
-        <div class="modal fade" id="instruccionesModal" tabindex="-1" aria-labelledby="instruccionesModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="instruccionesModalLabel">Instrucciones del Juego</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>El Simulador de Manejo es un juego donde el jugador debe manejar por la ruta esquivando otros veh&iacute;culos.</p>
-                    <ol class="text-start">
-                        <li>Para comenzar a jugar, apretar la tecla Enter.</li>
-                        <li>Luego, con las flechas te podr&aacute;s desplazar hacia la izquierda, derecha, arriba y abajo</li>
-                        <li>El juego termina cuando choc&aacute;s con otro veh&iacute;culo.</li>
-                    </ol>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-                </div>
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <div class="header__div">
+                <a href="#menu" class="header__logo1">
+                    <img src="../../../assets/images/icon-menu.svg" alt="Click para abrir menu" class="header__menuh">
+                </a>                
+                <a href="../../../index.html" class="header__logo2">
+                    <img src="../../../assets/images/two-ways_5353006.svg" alt="Logo MUNDO UX/UI">
+                </a>
             </div>
-        </div>  
+            <nav id="menu" class="header__menu">
+                <a href="#">
+                    <img src="assets/icon-cross.svg" alt="Click para cerrar menu" class="header__menuc">
+                </a>
+                <ul class="header__menu__items">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../integrantes.html">Integrantes</a></li>
+                    <li><a href="../../avances.html">Avances</a></li>
+                    <li><a href="../index.html"class="activo">Juegos</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+    <main>
+        <!--Inicio Sección hero-->        
+        <section class="heroS">
+            <article class="hero__info">
+                <h1 class="hero__info__h1">Simulador de Manejo</h1>
+            </article>
+        </section>    
+        <!--Fín Sección hero-->
+        <div class="ayudadiv">
+            <h1 class="ayuda_h1">Fernando Ferreyra</h1>
+            <a href="#" class="boton1" data-bs-toggle="modal" data-bs-target="#instruccionesModal">Instrucciones del juego</a>
+        </div> 
+    </main>
+    
+    <div class="game-container">
         <div id="help">
-            <p>Controles: Flechas Izquierda, Derecha, Arriba, Abajo</p>
+            <p class="black">Controles: Flechas Izquierda, Derecha, Arriba, Abajo</p>
         </div>
         
         <div id="container">
             <div id="score_div">
-                <p>Puntos: <span id="score">0</span></p>
-                <p>M&aacute;ximo Puntaje: <span id="high_score">0</span></p>
+                <p class="white">Puntos: <span id="score">0</span></p>
+                <p class="white">M&aacute;ximo Puntaje: <span id="high_score">0</span></p>
             </div>
             <div id="line_1" class="line"></div>
             <div id="line_2" class="line"></div>
@@ -90,8 +103,8 @@
                 <div class="b_tyre_l"></div>
                 <div class="b_tyre_r"></div>
             </div>
-            <div id="restart_div">
-                <p >Uy, Chocaste...</p>
+            <div id="restart_div" z-index="1">
+                <p class="white">Uy, Chocaste...</p>
                 <ul class="small_text text-start">
                     <li>Detenete.</li>
                     <li>Comprob&aacute; que todos est&eacute;n bien. Si hay heridos, llam&aacute; al 107.</li>
@@ -103,17 +116,62 @@
                     <small class="d-none d-lg-block small_text">(Enter)</small>
                 </button>
             </div>
-        </div>
-        <div id="touch-controls" class="d-block d-lg-none">
-            <button id="up" class="btn btn-control">↑</button>
-            <div class="btn-horizontal">
-                <button id="left" class="btn btn-control">←</button>
-                <button id="right" class="btn btn-control">→</button>
+            <div id="controls">
+                <div id="touch-controls" class="d-block d-lg-none" z-index="0">
+                    <button id="up" class="btn btn-control">↑</button>
+                    <div class="btn-horizontal">
+                        <button id="left" class="btn btn-control">←</button>
+                        <button id="right" class="btn btn-control">→</button>
+                    </div>
+                    <button id="down" class="btn btn-control">↓</button>
+                </div>
             </div>
-            <button id="down" class="btn btn-control">↓</button>
         </div>
     </div>    
+    <!-- Modal -->
+    <div class="modal fade" id="instruccionesModal" tabindex="-1" aria-labelledby="instruccionesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="instruccionesModalLabel">Instrucciones del juego</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    - Para comenzar a jugar, apretar la tecla Enter<br>
+                    - Luego, con las flechas te podr&aacute;s desplazar hacia la izquierda, derecha, arriba y abajo.<br>
+                    - El juego termina cuando choc&aacute;s con otro veh&iacute;culo.<br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
+
+    <!--Inicio del footer-->
+    <footer>
+        <div class="footer">
+            <div class="footer__col1">
+                <a href="./index.html" class="footer__logo">
+                    <img src="../../../assets/images/logo-uade-negro.svg" alt="Logo profesional">
+                </a>
+                <p class="pfooter w-sm-100 w-lg-75">Derechos reservados - Sitio desarrollado para uso educativo - Diseño y desarrollo Web - UADE - 2024</p>
+            </div>
+            <div class="footer__col2">
+                <nav class="footer__menu">
+                    <h5>Sitemap</h5>
+                    <ul class="footer__menu__items">
+                        <li><a href="../../../index.html">Home</a></li>
+                        <li><a href="../../integrantes.html">Integrantes</a></li>
+                        <li><a href="../../avances.html">Avances</a></li>
+                        <li><a href="../index.html">Juegos</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </div>  
+    </footer>  
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

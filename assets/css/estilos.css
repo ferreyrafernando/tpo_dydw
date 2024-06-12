@@ -1005,7 +1005,7 @@ select option {
 /**HOME**/
 
 .ayudadiv{
-  margin-top: 4rem;
+  margin-top: 1rem;
   max-width: 100%;
   display: flex;
   flex-direction: column ;

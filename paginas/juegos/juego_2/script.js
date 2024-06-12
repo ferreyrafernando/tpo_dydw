@@ -194,7 +194,7 @@ $(function() {
 
     restart_btn.click(function() {
         window.scrollTo({
-            top: document.getElementById('container').offsetTop,
+            top: document.getElementById('help').offsetTop,
             behavior: 'smooth'
         });
         setTimeout(function() {
@@ -204,6 +204,7 @@ $(function() {
 
     function stop_the_game() {
         game_over = true;
+        document.querySelector('#controls').style.display = 'none'; //Oculto las flechas en mobile cuando pierde
         cancelAnimationFrame(anim_id);
         cancelAnimationFrame(move_right);
         cancelAnimationFrame(move_left);
