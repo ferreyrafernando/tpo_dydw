@@ -196,7 +196,13 @@ $(function() {
     }
 
     restart_btn.click(function() {
-        location.reload();
+        window.scrollTo({
+            top: document.getElementById('container').offsetTop,
+            behavior: 'smooth'
+        });
+        setTimeout(function() {
+            location.reload();
+        }, 500);
     });
 
     function stop_the_game() {
