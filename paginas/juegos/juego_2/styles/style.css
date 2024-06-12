@@ -4,14 +4,6 @@ body {
   height: 100vh;
   margin: 0;
 }
-/* 
-@media screen and (max-width: 1280px) {
-  body {
-    display: grid;
-    margin: auto;
-    grid-template-columns: repeat(17, 1fr);
-  }
-} */
 
 header {
   position: relative;
