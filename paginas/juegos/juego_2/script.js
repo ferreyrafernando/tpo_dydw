@@ -1,9 +1,7 @@
-/* Rohit Ghadge */
 $(function() {
 
     var anim_id;
 
-    //saving dom objects to variables
     var container = $('#container');
     var car = $('#car');
     var car_1 = $('#car_1');
@@ -18,14 +16,12 @@ $(function() {
     var high_score = localStorage.getItem('high_score');
     $('#high_score').text(high_score);
 
-    //saving some initial setup
     var container_left = parseInt(container.css('left'));
     var container_width = parseInt(container.width());
     var container_height = parseInt(container.height());
     var car_width = parseInt(car.width());
     var car_height = parseInt(car.height());
 
-    //some other declarations
     var game_over = false;
 
     var score_counter = 1;
@@ -72,6 +68,51 @@ $(function() {
                 cancelAnimationFrame(move_down);
                 move_down = false;
             }
+        }
+    });
+
+    // Add touch controls (arrows) for mobile
+    $('#up').on('touchstart', function() {
+        if (game_over === false && move_up === false) {
+            move_up = requestAnimationFrame(up);
+        }
+    }).on('touchend', function() {
+        if (game_over === false) {
+            cancelAnimationFrame(move_up);
+            move_up = false;
+        }
+    });
+
+    $('#down').on('touchstart', function() {
+        if (game_over === false && move_down === false) {
+            move_down = requestAnimationFrame(down);
+        }
+    }).on('touchend', function() {
+        if (game_over === false) {
+            cancelAnimationFrame(move_down);
+            move_down = false;
+        }
+    });
+
+    $('#left').on('touchstart', function() {
+        if (game_over === false && move_left === false) {
+            move_left = requestAnimationFrame(left);
+        }
+    }).on('touchend', function() {
+        if (game_over === false) {
+            cancelAnimationFrame(move_left);
+            move_left = false;
+        }
+    });
+
+    $('#right').on('touchstart', function() {
+        if (game_over === false && move_right === false) {
+            move_right = requestAnimationFrame(right);
+        }
+    }).on('touchend', function() {
+        if (game_over === false) {
+            cancelAnimationFrame(move_right);
+            move_right = false;
         }
     });
 
@@ -152,7 +193,13 @@ $(function() {
     }
 
     restart_btn.click(function() {
-        location.reload();
+        window.scrollTo({
+            top: document.getElementById('container').offsetTop,
+            behavior: 'smooth'
+        });
+        setTimeout(function() {
+            location.reload();
+        }, 500);
     });
 
     function stop_the_game() {
@@ -195,7 +242,4 @@ $(function() {
         if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
         return true;
     }
-
-
-
 });
