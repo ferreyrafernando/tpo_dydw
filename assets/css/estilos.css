@@ -1541,6 +1541,10 @@ select option {
   margin-bottom: 20px;
 }
 
+.person-red {
+  filter: grayscale(100%) brightness(0.2) sepia(1) hue-rotate(-50deg) saturate(6);
+}
+
 .boton {
   font-family: "helvetica neue", sans-serif;
   font-size: 1rem;
