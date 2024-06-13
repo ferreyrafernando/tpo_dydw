@@ -219,6 +219,10 @@ body {
     width: 75% !important;
   }
 
+  .w-lg-50 {
+    width: 50% !important;
+  }
+
   @media (max-width: 768px) {
     .w-sm-100 {
       width: 100% !important;
@@ -1556,6 +1560,28 @@ select option {
   padding: 0.9rem 2rem 0.8rem 2rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+.boton_simple {
+  font-family: "helvetica neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #0D5DBA;
+  color: #fff;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #00316B;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .boton_simple {
+    width: 100%;
+  }
+}
+
+.w-lg-50 {
+  width: 50% important!;
 }
 
 #cards_avances {
