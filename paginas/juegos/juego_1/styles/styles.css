@@ -12,27 +12,9 @@ header {
   position: relative;
 }
 
-.back-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transform: translateY(-50%);
-  border: none;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.back-button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.back-button img {
-  height: auto;
+.hero_game1 {
+  color: white;
+  font-weight: bold;
 }
 
 li {
@@ -53,13 +35,16 @@ h1 {
 }
 
 h2 {
+  color: rgb(13, 93, 186);
   font-size: 1.5rem;
-  margin: 0.6rem;
+  margin: 1rem 0 0.8rem 0;
+  font-weight: bold;
 }
 
 .score-board {
-  margin-bottom: 20px;
+  margin: 1rem 0;
   font-size: 20px;
+  color: rgb(13, 93, 186);
 }
 
 .game-board {
@@ -71,6 +56,7 @@ h2 {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -110,19 +96,8 @@ h2 {
 }
 
 .restart-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-.restart-button:hover {
-  background-color: #217dbb;
+  margin: 2rem 0;
+  max-width: 70%;
 }
 
 @media (max-width: 600px) {
