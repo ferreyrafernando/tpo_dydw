@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             puntos += 10;
             resultadoDiv.innerText = "¡Correcto! Puntos: " + puntos;
         } else {
-            resultadoDiv.innerText = "Incorrecto. La respuesta correcta era: " + pregunta.opciones[pregunta.respuesta];
+            resultadoDiv.innerText = "Incorrecto. La respuesta correcta era: " + pregunta.opciones[pregunta.respuesta] + ".Puntos Actuales: " + puntos;
         }
 
         preguntaActual++;
@@ -64,13 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
         mostrarPregunta();
     }
 
-    function mostrarInstrucciones() {
-        alert("Instrucciones del juego:\n\n1. Lee la pregunta cuidadosamente.\n2. Selecciona la respuesta correcta entre las opciones.\n3. Cada respuesta correcta suma 10 puntos.\n4. Al finalizar las preguntas, se mostrará tu puntuación total.");
-    }
 
     mostrarPregunta();
-    window.mostrarInstrucciones = mostrarInstrucciones;
     window.reiniciarJuego = reiniciarJuego;
+
+    document.getElementById('reiniciar').addEventListener('click', function() {
+        reiniciarJuego();
+    });
 
     document.getElementById('backButton').addEventListener('click', function() {
         window.history.back();
