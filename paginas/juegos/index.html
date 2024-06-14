@@ -12,6 +12,9 @@
     <title>TPO - Educaci&oacute;n Vial</title>
 </head>
 <body>
+    <div id="loader"></div>
+    <div class="welcome-message" id="welcomeMessage">¡Bienvenido a la página de Juegos de Educación Vial!<br>Preparando a los jóvenes del mañana para una comunidad vial
+        responsable y amigable.</div>
     <header>
         <div class="header">
             <div class="header__div">
@@ -30,7 +33,14 @@
                     <li><a href="../../index.html">Home</a></li>
                     <li><a href="../integrantes.html">Integrantes</a></li>
                     <li><a href="../avances.html" >Avances</a></li>
-                    <li><a href="#" class="activo">Juegos</a></li>
+                    <li><a href="#" class="activo">Juegos</a>
+                        <ul class="submenu">
+                            <li class="sublist"><a href="juego_1/index.html">Memotest</a></li>
+                            <li class="sublist"><a href="juego_2/index.html">Simulador</a></li>
+                            <li class="sublist"><a href="juego_5/index.html">Conductor Sabio</a></li>
+                            <li class="sublist"><a href="juego_4/index.html">Decisiones Viales</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div> 
@@ -138,5 +148,18 @@
     <!-- Boostrap JS Script, jQuery CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            // Hide loader and show welcome message
+            $('#loader').fadeOut('slow', function() {
+                $('#welcomeMessage').fadeIn('slow', function() {
+                    // Hide the welcome message after 3 seconds
+                    setTimeout(function() {
+                        $('#welcomeMessage').fadeOut('slow');
+                    }, 3000);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
