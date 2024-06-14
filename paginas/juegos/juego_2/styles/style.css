@@ -5,9 +5,7 @@ body {
   margin: 0;
 }
 
-header {
-  position: relative;
-}
+
 
 h1 {
   color: #3498db;
@@ -187,7 +185,6 @@ h2 {
     color: #fff;
     padding: 10px;
 }
-/* Add these styles to the existing style.css */
 
 .btn-control {
   width: 60px;
@@ -213,7 +210,7 @@ h2 {
   justify-content: center;
 }
 
-/* Media Queries para dispositivos móviles */
+
 @media (max-width: 768px) {
   h1 {
     font-size: 1.8rem;
