@@ -173,6 +173,8 @@ body {
 
 /**header**/
 
+
+
   header {
     background-color: #ffffff;
     position: -webkit-sticky;
@@ -232,9 +234,9 @@ body {
     }
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 630px) {
     header {
-      z-index: 1;
+      z-index: 2;
     }
     header .header__div {
       width: 90%;
@@ -261,10 +263,10 @@ body {
     }
     header .header__menuc {
       display: block;
+      width: 6rem;
       padding-top: 3rem;
       padding-left: 3.6rem;
       padding-bottom: 3rem;
-      background-color: #00316B;
     }
     .header {
       max-width: 100%;
@@ -463,6 +465,9 @@ color: #00316B;
 .hero div.hero__info__boton {
   display: flex;
   justify-content: center;
+}
+.hero_home{
+  height:65vh;
 }
 
 @media screen and (min-width: 1281px) {
@@ -1659,7 +1664,7 @@ select option {
 }
 .card_juegos_img {
   width: 200px; 
-  height: auto; 
+  height: 14rem; 
   max-width: 100%;
   object-fit: cover;
   border-radius: 8px;
