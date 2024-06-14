@@ -63,13 +63,16 @@ body {
     color: #ffffff;
     font-size: 2.5rem;
     font-weight: 500;
+    margin-bottom: 1.5rem;
   }
   
-  h2 {
+  .hero__info__h2 {
     margin: 3.5rem 0 3.5rem 0;
     color: #FFFFFF;
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
   
   h3 {
@@ -109,6 +112,21 @@ body {
     color: #595959;
     font-size: 1rem;
   }
+  .button{
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (max-width: 767px) {
+    .button{
+      display: flex;
+      flex-direction: column;
+      width: 100% !important;
+    }
+    .boton1 {
+      width: 100% !important;
+    }
+  }
 
   .boton1 {
     font-family: "helvetica neue", sans-serif;
@@ -117,20 +135,74 @@ body {
     color: #00316B;
     border-radius: 0.5rem;
     border: 0.2rem solid #00316B;
-    padding: 0.9rem 2rem 0.8rem 2rem;
+    padding: 0.9rem 1rem 0.8rem 1rem;
     margin-top: 2rem;
     margin-top: 2rem;
+    margin-right: 2rem;
+    width: 15rem;
+  }
+  .boton2j {
+    font-family: "helvetica neue", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #00316B;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #00316B;
+    padding: 0.9rem 1rem 0.8rem 1rem;
+    margin-top: 2rem;
+    margin-top: 2rem;
+  }
+
+  .boton1j {
+    font-family: "helvetica neue", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #00316B;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #00316B;
+    padding: 0.9rem 1rem 0.8rem 1rem;
+    margin-top: 2rem;
+    margin-top: 2rem;
+    width: auto;
+  }
+
+  .boton1:hover {
+    font-family: "helvetica neue", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #00316B;
+    padding: 0.9rem 1rem 0.8rem 1rem;
+    margin-top: 2rem;
+    margin-top: 2rem;
+    background-color: #00316B;
+  }
+  
+
+  .boton_simple {
+    font-family: "helvetica neue", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #0D5DBA;
+    color: #fff;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #00316B;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    width: 50%;
   }
   
   .boton2 {
     font-family: "helvetica neue", sans-serif;
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 500;
-    color: #ffffff;
-    background-color: #007989;
+    color: #00316B;
     border-radius: 0.5rem;
-    border: 0.2rem solid #005F6C;
-    padding: 0.8rem 2rem 0.8rem 2rem;
+    border: 0.2rem solid #00316B;
+    padding: 0.9rem 1rem 0.8rem 1rem;
+    margin-top: 2rem;
+    margin-top: 2rem;
   }
   
   .boton3 {
@@ -146,19 +218,6 @@ body {
     margin-bottom: 1rem;
   }
 
-  .boton1:hover {
-    font-family: "helvetica neue", sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ffffff;
-    border-radius: 0.5rem;
-    border: 0.2rem solid #00316B;
-    padding: 0.9rem 2rem 0.8rem 2rem;
-    margin-top: 2rem;
-    margin-top: 2rem;
-    background-color: #00316B;
-  }
-  
   .boton2:hover {
     font-family: "helvetica neue", sans-serif;
     font-size: 0.7rem;
@@ -183,6 +242,7 @@ body {
     z-index: 1;
     padding-top: 2rem;
     padding-bottom: 1rem;
+    
   }
   .header {
     max-width: 100%;
@@ -191,6 +251,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    align-items: baseline
   }
 
 
@@ -206,6 +267,7 @@ body {
   .header__menu__items li {
     margin-left: 4rem;
     list-style: none;
+    
   }
   .header__menu__items a {
     color: #5B5B5B;
@@ -242,8 +304,8 @@ body {
       width: 90%;
       display: flex;
       flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+      align-items: center !important;
+      justify-content: space-between !important;
     }
     header nav {
       position: fixed;  
@@ -251,7 +313,7 @@ body {
       top: 0;
       width: 70%;
       height: 100vh;
-      background-color: #004494;
+      background-color: #00316B;
       box-shadow: 0px 10px 20px -6px rgba(255, 255, 255, 0.8);
       transition: left 0.5s;
     }
@@ -279,14 +341,14 @@ body {
       width: 70%;
       height: 60%;
       padding-left: 2rem;
-      flex-direction: column;
-      justify-content: space-around;
+      flex-direction: column !important;
+      justify-content: space-around !important;
     }
     .header__menu__items a {
       color: #ffffff;
     }
     .header__menu__items a.activo {
-      color: #ffffff;
+      color: #009ADC !important;
       font-weight: 800
     }
   }
@@ -404,7 +466,7 @@ footer h5 {
 }
 
 .header__menu__items li a.activo {
-color: #00316B;
+color: #009ADC;
 }
 
 .header__menu__items li a:hover:before, .footer__menu__items li a:hover:before {
@@ -438,7 +500,7 @@ color: #00316B;
 @media screen and (max-width: 450px) {
 
   .header__menu {
-   background-color: #00316B;
+   background-color: #00316B !important;
   }
 
   .header__menu__items li a.activo {
@@ -468,6 +530,18 @@ color: #00316B;
 }
 .hero_home{
   height:65vh;
+}
+
+.hero_p {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.hero_img{
+  margin-top: 1.6rem;
 }
 
 @media screen and (min-width: 1281px) {
@@ -1567,16 +1641,17 @@ select option {
   margin-bottom: 4rem;
 }
 
-.boton_simple {
+.botond {
   font-family: "helvetica neue", sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  background-color: #0D5DBA;
-  color: #fff;
+  background-color: #D9D9D9;
+  color: #B6B6B6;
   border-radius: 0.5rem;
-  border: 0.2rem solid #00316B;
-  padding: 0.5rem 2rem 0.5rem 2rem;
-  width: 50%;
+  border: 0.2rem solid #A7A7A7;
+  padding: 0.9rem 2rem 0.8rem 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 @media (max-width: 767px) {
@@ -1644,6 +1719,7 @@ select option {
 }
 /* Sección Juegos */
 .cards {
+  font-family: Arial, Helvetica, sans-serif;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -1662,6 +1738,14 @@ select option {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.header nav ul.header__menu__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
 .card_juegos_img {
   width: 200px; 
   height: 14rem; 
@@ -1687,6 +1771,7 @@ select option {
   margin: 0.5rem 0;
 }
 .card_juegos_p {
+
   font-size: 1rem;
   font-weight: 300;
   color: rgb(0, 0, 0);
@@ -1722,6 +1807,6 @@ select option {
   .card_juegos_img {
       width: 100%;
       height: auto;
-      margin-bottom: 1rem;overflow-x:;
+      margin-bottom: 1rem;
   }
 }

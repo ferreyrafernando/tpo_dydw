@@ -236,3 +236,28 @@ p.black {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.hero__info {
+  display: flex;
+  align-items: center;
+}
+
+.hero__info__h1 {
+  margin-right: 10px;
+}
+
+.hero__info__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero__info__img {
+  width: 30px;
+  height: 30px;
+}
+
+.header__logo2 img{
+  margin-right: 2rem;
+}

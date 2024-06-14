@@ -316,13 +316,13 @@ $(document).ready(function() {
         // Asignar el mensaje y la imagen según el porcentaje obtenido
         if (percentage >= 70) {
             message = "¡Felicidades! ¡Eres un genio frente al volante!";
-            imagePath = '../../../assets/images/exito.gif'; // Ruta de la imagen para felicitaciones
+            imagePath = '../../../assets/images/exito.gif';
         } else if (percentage >= 50 && percentage < 70) {
             message = "¡Bien! Aun puedes seguir mejorando.";
-            imagePath = '../../../assets/images/maso.gif'; // Ruta de la imagen para buen rendimiento
+            imagePath = '../../../assets/images/maso.gif';
         } else {
             message = "¡Auch! Sigue practicando.";
-            imagePath = '../../../assets/images/mal.gif'; // Ruta de la imagen para mal rendimiento
+            imagePath = '../../../assets/images/mal.gif'; 
         }
     
         // Crear elemento de imagen
