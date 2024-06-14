@@ -1517,3 +1517,54 @@ select option {
 .header__logo2 img{
   margin-right: 2rem;
 }
+
+.header__menu__items li .sublist {
+  margin-left: 1rem;
+  list-style: none;
+}
+
+/* Estilos para el menú y el submenu */
+.header__menu__items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__menu__items > li {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #fff; /* Fondo del submenu */
+}
+
+.header__menu__items > li:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  padding: 10px 15px;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: #000; /* Color del texto del submenu */
+}
+
+/* Media query para resoluciones móviles */
+@media (max-width: 768px) {
+  .submenu {
+      display: none !important;
+  }
+
+  .header__menu__items > li:hover .submenu {
+      display: none;
+  }
+}

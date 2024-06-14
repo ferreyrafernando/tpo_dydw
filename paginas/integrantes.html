@@ -28,7 +28,14 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="#" class="activo">Integrantes</a></li>
                     <li><a href="avances.html">Avances</a></li>
-                    <li><a href="juegos/index.html">Juegos</a></li>
+                    <li><a href="juegos/index.html">Juegos</a>
+                        <ul class="submenu">
+                            <li class="sublist"><a href="juegos/juego_1/index.html">Memotest</a></li>
+                            <li class="sublist"><a href="juegos/juego_2/index.html">Simulador</a></li>
+                            <li class="sublist"><a href="juegos/juego_5/index.html">Conductor Sabio</a></li>
+                            <li class="sublist"><a href="juegos/juego_4/index.html">Decisiones Viales</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div> 
@@ -63,7 +70,7 @@
                     <div class="person-card">
                         <img src="../assets/images/foto_franco.jpeg" class="person-img img-fluid person-red" alt="Franco">
                         <div class="person-name">Mart&iacute;nez Franco</div>
-                        <a href="#" class="botond">Ficha personal</a>
+                        <a href="#" class="boton" data-bs-toggle="modal" data-bs-target="#informacionAusencia">Ficha personal</a>
                     </div>
                 </div>
             </div>
@@ -85,6 +92,25 @@
             </div>
         </div>
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="informacionAusencia" tabindex="-1" aria-labelledby="informacionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="informacionModalLabel">Información Importante</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Franco se di&oacute; de baja de la materia, se lo notaba comprometido y con ganas pero por motivos personales tuvo que abandonar.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Inicio del footer-->
     <footer>
         <div class="footer">
@@ -111,6 +137,7 @@
     <!--Fin del footer-->
 
     <!-- Boostrap JS Script, jQuery CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
